@@ -27,7 +27,7 @@ class Csv
       $this->total += (int) $row[3] + (int) $row[4];
     }
 
-    array_push($this->csv, ['', '', 'Subtotal', $this->rates, '']);
+    array_push($this->csv, ['', '', 'Subtotal', $this->rates + $this->taxes, '']);
     array_push($this->csv, ['', '', 'Total', $this->total, '']);
   }
 }
